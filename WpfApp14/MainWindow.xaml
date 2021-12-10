@@ -7,21 +7,20 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
 
-    <Window.Resources>
-        <ResourceDictionary>
-            <DataTemplate x:Key="singleUnit">
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="{Binding fileName}" FontSize="20" Foreground="{Binding color}" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                    <TextBlock/>
-                </StackPanel>
-            </DataTemplate>
-        </ResourceDictionary>
-    </Window.Resources>
-
     <Grid>
         <ListBox Name="MyListBox" Width="300" Height="600">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding FileName}" FontSize="20" Foreground="{Binding Color}"
+                                       HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <TextBlock/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
 
         </ListBox>
-        <Button Content="Change color theme" HorizontalAlignment="Left" Margin="56,126,0,0" VerticalAlignment="Top" Width="164" Click="Button_Click" Height="36"/>
+        <Button Content="Change color theme" HorizontalAlignment="Left" Margin="56,126,0,0" VerticalAlignment="Top" Width="164"
+                Click="Button_Click" Height="36"/>
     </Grid>
 </Window>
