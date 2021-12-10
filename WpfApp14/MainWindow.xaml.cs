@@ -76,15 +76,12 @@ namespace WpfApp14
         {
             count++;
 
-            // Do something to change all fileName items' forground color to red.
-            // For example if user changes the color theme, and we should just change some UI color
-            // while not changing any other part, e.g. the position of scrollbar
             foreach (var item in MyListBox.Items)
             {
                 if (count % 2 == 0)
-                    ((ViewModelFile)item).Color = new SolidColorBrush(Colors.Red);
-                else
                     ((ViewModelFile)item).Color = new SolidColorBrush(Colors.Blue);
+                else
+                    ((ViewModelFile)item).Color = new SolidColorBrush(Colors.Red);
             }
         }
     }
